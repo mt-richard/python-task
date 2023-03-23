@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #042a41;
+            font-family: century Gothic;
+        }
+
+        h2 {
+            color: #fbf8f8;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+            font-style: bold;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+            font-weight:300;
+        }
+
+        .inputbox {
+            margin-bottom: 10px;
+        }
+
+        .input {
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            font-size: 14px;
+            border: none;
+        }
+
+        .btn {
+            background-color: #042a41;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            font-weight: 500;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Welcome to our site</h2>
+    </div>
+    <div>
+        <form action="/submit" method="POST">
+            <div class="inputbox">
+                <label for="id">ID</label>
+                <div class="input">
+                    <input type="text" name="id" id="id">
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="name">Name</label>
+                <div class="input">
+                    <input type="text" name="name" id="name">
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="php">PHP Marks</label>
+                <div class="input">
+                    <input type="number" name="php" id="php">
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="js">Js Marks</label>
+                <div class="input">
+                    <input type="number" name="js" id="js">
+                </div>
+            </div>
+            <div class="inputbox">
+                <label for="java">JAVA Marks</label>
+                <div class="input">
+                    <input type="number" name="java" id="java">
+                </div>
+            </div>
+            <div class="inputbox">
+                <input class="btn" type="submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
