@@ -15,10 +15,19 @@
 
         h2 {
             color: #fbf8f8;
-            text-align: center;
+            text-align: left;
             margin-top: 50px;
             font-size: 2rem;
             font-style: bold;
+        }
+        p{
+            
+            color: #d0cdcd;
+            text-align: left;
+            margin-top: 50px;
+            font-size: 1.3rem;
+            line-height: 2rem;
+        
         }
 
         form {
@@ -70,48 +79,66 @@
         .btn:hover {
             background-color: #555;
         }
+        .all{
+            display: flex;
+            
+            padding: 5rem;
+        }
+        .form-input{
+            width: 60%;
+        }
+        .content{
+            width: 40%;
+            padding-left: 5rem;
+        }
     </style>
 </head>
 <body>
-    <div>
-        <h2>Welcome to our site</h2>
-    </div>
-    <div>
-        <form action="/submit" method="POST">
-            <div class="inputbox">
-                <label for="id">ID</label>
-                <div class="input">
-                    <input type="text" name="id" id="id">
-                </div>
+
+    <div class="all">
+
+            <div class="content">
+                <h2>Welcome to Student Marks Portal</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ratione id magnam eligendi necessitatibus voluptatum eos consectetur fugiat veritatis ducimus. Odit enim, omnis perspiciatis corrupti numquam amet molestias vel eos quaerat ea impedit tempora aperiam! Sequi, minima nulla. Dolorum, accusamus.</p>
             </div>
-            <div class="inputbox">
-                <label for="name">Name</label>
-                <div class="input">
-                    <input type="text" name="name" id="name">
-                </div>
+    
+            <div class="form-input">
+                <form action="/submit" method="POST">
+                    <div class="inputbox">
+                        <label for="id">ID</label>
+                        <div class="input">
+                            <input type="text" name="id" id="id">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <label for="name">Name</label>
+                        <div class="input">
+                            <input type="text" name="name" id="name">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <label for="php">PHP Marks</label>
+                        <div class="input">
+                            <input type="number" name="php" id="php">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <label for="js">Js Marks</label>
+                        <div class="input">
+                            <input type="number" name="js" id="js">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <label for="java">JAVA Marks</label>
+                        <div class="input">
+                            <input type="number" name="java" id="java">
+                        </div>
+                    </div>
+                    <div class="inputbox">
+                        <input class="btn" type="submit" name="submit" value="Submit">
+                    </div>
+                </form>
             </div>
-            <div class="inputbox">
-                <label for="php">PHP Marks</label>
-                <div class="input">
-                    <input type="number" name="php" id="php">
-                </div>
-            </div>
-            <div class="inputbox">
-                <label for="js">Js Marks</label>
-                <div class="input">
-                    <input type="number" name="js" id="js">
-                </div>
-            </div>
-            <div class="inputbox">
-                <label for="java">JAVA Marks</label>
-                <div class="input">
-                    <input type="number" name="java" id="java">
-                </div>
-            </div>
-            <div class="inputbox">
-                <input class="btn" type="submit" name="submit" value="Submit">
-            </div>
-        </form>
-    </div>
+        </div>
 </body>
 </html>

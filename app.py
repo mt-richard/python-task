@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-import psycopg2
+from flask import Flask, render_template, request, redirect
+import pymysql
 import csv
 
 # from render import render
@@ -31,16 +31,16 @@ def my_dbconn():
     average = total/3
 
 
-    conn = psycopg2.connect(
+    conn = pymysql.connect(
         host="localhost",
-        user="richard",
-        password="richard",
+        user="root",
+        password="",
         database="ngo_mis"
     )
     print( "DB connected Successfull .........")
     cur = conn.cursor()
 
-    cur.execute("INSERT INTO student (id, name, php, js, java, total, average) VALUES (%s, %s, %s, %s, %s,%s, %s)", (id, name, php, js, java, total, average))
+    cur.execute("INSERT INTO student ( name, php, js, java, total, average) VALUES (%s, %s, %s, %s,%s, %s)", ( name, php, js, java, total, average))
     conn.commit()
 
 # Exporting Report
@@ -48,15 +48,19 @@ def my_dbconn():
         writer = csv.writer(csv_file)
         writer.writerow([id, name, php, js, java, total, average]) 
     
-    return ("Data was Success Full Added !!!!")
+    # return ("Data was Success Full Added !!!!")
+
+    # return ('<script>alert("Inserted Succesfull !!!")</script>')
+    return redirect('/report')
+    
 
 
-@app.route('/display')
+@app.route('/report')
 def getAll():
-    conn = psycopg2.connect(
+    conn = pymysql.connect(
         host="localhost",
-        user="richard",
-        password="richard",
+        user="root",
+        password="",
         database="ngo_mis"
     )
     print( "DB connected Successfull .........")
